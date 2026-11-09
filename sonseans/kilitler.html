@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>Son Seans Kilitleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Special+Elite&display=swap">
+<style>
+:root{--bg:#e9e1cf;--paper:#fbf8f0;--paper2:#f2ebdb;--ink:#26201a;--muted:#6c604e;--rule:#cbbc9c;--red:#8e1f2b;--redbg:rgba(142,31,43,.08);--green:#2e5e3a;--greenbg:rgba(46,94,58,.10);--wine:#5b1626;--shadow:0 1px 0 rgba(60,40,10,.08),0 6px 18px -8px rgba(60,40,10,.35);--panel:#1d1a17;--amber:#f0b44c;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15120f;--paper:#221d18;--paper2:#2a241d;--ink:#ece3d2;--muted:#ab9e88;--rule:#4a4031;--red:#e7808a;--redbg:rgba(231,128,138,.10);--green:#8cc59a;--greenbg:rgba(140,197,154,.10);--wine:#e7808a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.8);--panel:#0d0b09;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15120f;--paper:#221d18;--paper2:#2a241d;--ink:#ece3d2;--muted:#ab9e88;--rule:#4a4031;--red:#e7808a;--redbg:rgba(231,128,138,.10);--green:#8cc59a;--greenbg:rgba(140,197,154,.10);--wine:#e7808a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.8);--panel:#0d0b09;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Serif 4",Georgia,"Times New Roman",serif;padding-inline:16px;padding-block:env(safe-area-inset-top,0px) calc(64px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:720px;margin:0 auto}
+.tab{display:inline-block;margin-top:18px;background:var(--paper2);border:1px solid var(--rule);border-bottom:none;border-radius:8px 8px 0 0;padding:6px 16px;font:14px "Special Elite","Courier New",monospace;color:var(--muted);letter-spacing:.04em}
+.hero{background:var(--paper);border:1px solid var(--rule);border-radius:0 10px 10px 10px;padding:22px 22px 20px;box-shadow:var(--shadow)}
+.kicker{font:13px "Special Elite","Courier New",monospace;color:var(--red);letter-spacing:.12em;text-transform:uppercase}
+h1{font:600 clamp(30px,7vw,44px)/1.05 Oswald,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:6px 0 10px;text-wrap:balance}
+h2{font:600 22px/1.2 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em;margin:34px 0 10px;text-wrap:balance}
+h3{font:600 17px/1.3 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.04em;margin:0}
+p{margin:0 0 12px}
+.lede{color:var(--muted);font-size:16px;margin:0}
+.tw{font-family:"Special Elite","Courier New",monospace}
+.pg{font:13px "Special Elite","Courier New",monospace;background:var(--paper2);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap;color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.stack{display:flex;flex-direction:column;gap:14px}
+details{background:var(--paper);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow)}
+details>summary{list-style:none;cursor:pointer;padding:14px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+details>summary::-webkit-details-marker{display:none}
+details>summary>span:first-child{min-width:0}
+details>summary .chev{font:13px "Special Elite",monospace;color:var(--muted);white-space:nowrap;flex:none}
+details[open]>summary .chev::before{content:"kapat ▲"}
+details:not([open])>summary .chev::before{content:"aç ▼"}
+details .body{padding:14px 18px 16px;border-top:1px dashed var(--rule)}
+details details{box-shadow:none;background:var(--paper2);margin-top:10px}
+.lvl{font:12px "Special Elite",monospace;color:var(--red);letter-spacing:.1em;text-transform:uppercase}
+.code{display:inline-block;font:600 26px/1 "Special Elite",monospace;letter-spacing:.18em;background:var(--panel);color:var(--amber);padding:10px 14px;border-radius:6px}
+ul,ol{margin:0 0 12px;padding-left:22px}
+li{margin-bottom:6px}
+.tbl{overflow-x:auto;margin:6px 0 14px}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 13px Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.t{font-family:"Special Elite",monospace;white-space:nowrap}
+.foot{margin-top:40px;text-align:center;font:13px "Special Elite",monospace;color:var(--muted)}
+button{font:inherit;cursor:pointer}
+.btn{font:600 16px Oswald,"Arial Narrow",sans-serif;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;border-radius:8px;padding:12px 20px}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.mark{background:var(--redbg);border-left:3px solid var(--red);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0 14px}
+.ok{background:var(--greenbg);border-left:3px solid var(--green)}
+a{color:var(--wine)}
+.pz>summary h3{font-size:20px} a.jump{color:var(--ink)}</style></head>
+<body><div class="wrap">
+<div class="tab">DOSYA 1983/412 · KİLİTLER</div>
+<header class="hero"><div class="kicker">İpucu ve cevaplar</div><h1>Kilitler</h1><p class="lede">Dosyadaki beş kilidin ipuçları ve cevapları.</p></header>
+
+<div class="mark" style="margin-top:18px">Bir kilitte tıkandıysanız buradan açın. Önce İpucu 1, sonra İpucu 2, cevap en sonda. Kilitler birbirinden bağımsız; birini açamasanız da vakayı çözebilirsiniz.</div>
+<div class="card"><div class="tbl" style="margin:0"><table><tr><th>Kilit</th><th>Ne?</th><th>Sayfa</th></tr><tr><td class="t">1</td><td><a href="#k1" class="jump" data-k="k1">Montaj çantası</a></td><td class="t">sf. 17</td></tr><tr><td class="t">2</td><td><a href="#k2" class="jump" data-k="k2">Duvar kasası</a></td><td class="t">sf. 15</td></tr><tr><td class="t">3</td><td><a href="#k3" class="jump" data-k="k3">Günlük</a></td><td class="t">sf. 33</td></tr><tr><td class="t">4</td><td><a href="#k4" class="jump" data-k="k4">Evrak çantası</a></td><td class="t">sf. 29</td></tr><tr><td class="t">5</td><td><a href="#k5" class="jump" data-k="k5">Makinist çekmecesi</a></td><td class="t">sf. 36</td></tr></table></div></div>
+<div class="stack" style="margin-top:14px"><details class="pz" id="k1"><summary><span><span class="kicker">Kilit 1</span><h3 style="margin-top:2px">Kaan'ın montaj çantası</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 17 · aranan: beş harf</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Her şerit parçasının ortadaki karesinde bir harf var. Şeridin kenarında küçük sarı yazılar da var: üretici firma ve bir sıra numarası. Kaan Bey "kenarına bakar" diyor.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Parçaları kenar numarasına göre dizin. Ama iki parçada aynı numara var. Hangisi bu filme ait değil? Filmin hangi film stokuna çekildiği gala programında yazıyor <span class="pg">sf. 10</span>.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Film Kodak Eastmancolor ile çekildi; AGFA yazan parça başka bir filmden. Kodak parçaları 41'den 45'e dizilince: <b>P · E · R · D · E</b>.</p><p style="margin-top:14px">Şifre: <span class="code">PERDE</span></p></div></details>
+</div></details><details class="pz" id="k2"><summary><span><span class="kicker">Kilit 2</span><h3 style="margin-top:2px">Nevzat Bey'in duvar kasası</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 15 · aranan: dört rakam</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Kasanın kuralını Leman Hanım söylüyor <span class="pg">sf. 14</span>: şirketin <i>ilk vizyona giren</i> filminin yılı, sonra ayı. Levhadaki filmler sırayla dizilmemiş.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>"Çekim" yılı değil, "vizyon" tarihi önemli. Hiç gösterilmeyen filmler sayılmaz. Vizyon tarihlerini sıralayın; en eskisi hangisi? Yılın son iki hanesi, sonra ay.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Gölge (1958) ve eski Kırık Ayna (1965) hiç gösterilmedi. Son Vapur 1957'de çekildi ama Ocak 1960'ta vizyona girdi. İlk vizyon: <b>Ayrılık Rüzgârı, Ekim 1959</b> → 59 10.</p><p style="margin-top:14px">Şifre: <span class="code">5910</span></p></div></details>
+</div></details><details class="pz" id="k3"><summary><span><span class="kicker">Kilit 3</span><h3 style="margin-top:2px">Ceren'in günlüğü</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 33 · aranan: dört harf</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>"İki resim, bir kelime." Her resmin Türkçe adını, mümkün olan en kısa haliyle düşünün, sonra yan yana koyun.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Soldaki hayvan iki harf. Sağdaki ikili, bir gelinle damat: evlenince birbirlerinin neyi olurlar? O da iki harf.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>AT + EŞ = <b>ATEŞ</b>.</p><p style="margin-top:14px">Şifre: <span class="code">ATEŞ</span></p></div></details>
+</div></details><details class="pz" id="k4"><summary><span><span class="kicker">Kilit 4</span><h3 style="margin-top:2px">Murat'ın evrak çantası</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 29 · aranan: dört rakam</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Kupondaki rakamlar Murat'ın tahminleri, kazananlar değil. Murat "hiçbirini bilemedim" diyor. Kazananları başka bir yerde bulmalısınız.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Murat'ın paltosundan çıkan gazeteye bakın <span class="pg">sf. 28</span>. İlk dört koşunun birincileri.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Akşam gazetesi: 1. koşu 6, 2. koşu 1, 3. koşu 9, 4. koşu 4. Murat'ın kuponunda bunların hiçbiri yok.</p><p style="margin-top:14px">Şifre: <span class="code">6194</span></p></div></details>
+</div></details><details class="pz" id="k5"><summary><span><span class="kicker">Kilit 5</span><h3 style="margin-top:2px">Rıza Usta'nın çekmecesi</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 36 · aranan: üç rakam</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Envanterde üç satır karalanmış. Rıza o gün patronun emriyle bir kutu yaktı <span class="pg">sf. 35</span>. Gala gününde, galadan önce, Nevzat Bey hangi filmin kopyasından kurtulmak isterdi?</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Gala programının son satırını okuyun <span class="pg">sf. 10</span>: yeni filmin aslı hangi yıldan, renkli mi siyah-beyaz mı? Karalanmış satırların yıl ve renk sütunlarıyla karşılaştırın.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Yeni Kırık Ayna, 1965 yapımı <b>siyah-beyaz</b> bir filmden uyarlanmış; levhada eski Kırık Ayna "vizyona girmedi" diye geçiyor. Karalanan satırlardan 207 (1958, sansür) Gölge'dir; 219 renklidir ve kiralıktır. 1965 siyah-beyaz olan tek satır: raf <b>214</b>.</p><p style="margin-top:14px">Şifre: <span class="code">214</span></p></div></details>
+</div></details></div>
+<p class="lede" style="margin-top:20px">Şifreleri 1 numaralı QR'daki <b>Kasa</b>'ya yazın.</p>
+<div class="foot">İstanbul C. Başsavcılığı · Hz. 1983/412 · Yıldız Sineması</div>
+</div>
+<script>document.querySelectorAll('a.jump').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const d=document.getElementById(a.dataset.k);d.open=true;d.scrollIntoView({behavior:'smooth'});}));</script>
+</body></html>
