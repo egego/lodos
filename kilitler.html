@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex"><title>Lodos Kilitleri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Special+Elite&display=swap">
+<style>
+:root{--bg:#e9e1cf;--paper:#fbf8f0;--paper2:#f2ebdb;--ink:#26201a;--muted:#6c604e;--rule:#cbbc9c;--red:#8e1f2b;--redbg:rgba(142,31,43,.08);--green:#2e5e3a;--greenbg:rgba(46,94,58,.10);--wine:#5b1626;--shadow:0 1px 0 rgba(60,40,10,.08),0 6px 18px -8px rgba(60,40,10,.35);--panel:#1d1a17;--amber:#f0b44c;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15120f;--paper:#221d18;--paper2:#2a241d;--ink:#ece3d2;--muted:#ab9e88;--rule:#4a4031;--red:#e7808a;--redbg:rgba(231,128,138,.10);--green:#8cc59a;--greenbg:rgba(140,197,154,.10);--wine:#e7808a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.8);--panel:#0d0b09;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15120f;--paper:#221d18;--paper2:#2a241d;--ink:#ece3d2;--muted:#ab9e88;--rule:#4a4031;--red:#e7808a;--redbg:rgba(231,128,138,.10);--green:#8cc59a;--greenbg:rgba(140,197,154,.10);--wine:#e7808a;--shadow:0 1px 0 rgba(0,0,0,.4),0 8px 22px -10px rgba(0,0,0,.8);--panel:#0d0b09;color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Serif 4",Georgia,"Times New Roman",serif;padding-inline:16px;padding-block:env(safe-area-inset-top,0px) calc(64px + env(safe-area-inset-bottom,0px))}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:720px;margin:0 auto}
+.tab{display:inline-block;margin-top:18px;background:var(--paper2);border:1px solid var(--rule);border-bottom:none;border-radius:8px 8px 0 0;padding:6px 16px;font:14px "Special Elite","Courier New",monospace;color:var(--muted);letter-spacing:.04em}
+.hero{background:var(--paper);border:1px solid var(--rule);border-radius:0 10px 10px 10px;padding:22px 22px 20px;box-shadow:var(--shadow)}
+.kicker{font:13px "Special Elite","Courier New",monospace;color:var(--red);letter-spacing:.12em;text-transform:uppercase}
+h1{font:600 clamp(30px,7vw,44px)/1.05 Oswald,"Arial Narrow",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:6px 0 10px;text-wrap:balance}
+h2{font:600 22px/1.2 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em;margin:34px 0 10px;text-wrap:balance}
+h3{font:600 17px/1.3 Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.04em;margin:0}
+p{margin:0 0 12px}
+.lede{color:var(--muted);font-size:16px;margin:0}
+.tw{font-family:"Special Elite","Courier New",monospace}
+.pg{font:13px "Special Elite","Courier New",monospace;background:var(--paper2);border:1px solid var(--rule);border-radius:4px;padding:0 5px;white-space:nowrap;color:var(--muted)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;box-shadow:var(--shadow)}
+.stack{display:flex;flex-direction:column;gap:14px}
+details{background:var(--paper);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow)}
+details>summary{list-style:none;cursor:pointer;padding:14px 18px;display:flex;gap:12px;align-items:center;justify-content:space-between}
+details>summary::-webkit-details-marker{display:none}
+details>summary>span:first-child{min-width:0}
+details>summary .chev{font:13px "Special Elite",monospace;color:var(--muted);white-space:nowrap;flex:none}
+details[open]>summary .chev::before{content:"kapat ▲"}
+details:not([open])>summary .chev::before{content:"aç ▼"}
+details .body{padding:14px 18px 16px;border-top:1px dashed var(--rule)}
+details details{box-shadow:none;background:var(--paper2);margin-top:10px}
+.lvl{font:12px "Special Elite",monospace;color:var(--red);letter-spacing:.1em;text-transform:uppercase}
+.code{display:inline-block;font:600 26px/1 "Special Elite",monospace;letter-spacing:.18em;background:var(--panel);color:var(--amber);padding:10px 14px;border-radius:6px}
+ul,ol{margin:0 0 12px;padding-left:22px}
+li{margin-bottom:6px}
+.tbl{overflow-x:auto;margin:6px 0 14px}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:600 13px Oswald,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+td.t{font-family:"Special Elite",monospace;white-space:nowrap}
+.foot{margin-top:40px;text-align:center;font:13px "Special Elite",monospace;color:var(--muted)}
+button{font:inherit;cursor:pointer}
+.btn{font:600 16px Oswald,"Arial Narrow",sans-serif;letter-spacing:.08em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:none;border-radius:8px;padding:12px 20px}
+.btn:focus-visible,input:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.mark{background:var(--redbg);border-left:3px solid var(--red);padding:10px 14px;border-radius:0 8px 8px 0;margin:10px 0 14px}
+.ok{background:var(--greenbg);border-left:3px solid var(--green)}
+a{color:var(--wine)}
+.pz>summary h3{font-size:20px} a.jump{color:var(--ink)}</style></head>
+<body><div class="wrap">
+<div class="tab">DOSYA 1978/63 · KİLİTLER</div>
+<header class="hero"><div class="kicker">İpucu ve cevaplar</div><h1>Kilitler</h1><p class="lede">Dosyadaki beş kilidin ipuçları ve cevapları.</p></header>
+
+<div class="mark" style="margin-top:18px">Bir kilitte tıkandıysanız buradan açın. Önce İpucu 1, sonra İpucu 2, cevap en sonda. Kilitler birbirinden bağımsız; birini açamasanız da vakayı çözebilirsiniz.</div>
+<div class="card"><div class="tbl" style="margin:0"><table><tr><th>Kilit</th><th>Ne?</th><th>Sayfa</th></tr><tr><td class="t">1</td><td><a href="#k1" class="jump" data-k="k1">Film rulosu</a></td><td class="t">sf. 21</td></tr><tr><td class="t">2</td><td><a href="#k2" class="jump" data-k="k2">Hayri Bey'in çekmecesi</a></td><td class="t">sf. 14</td></tr><tr><td class="t">3</td><td><a href="#k3" class="jump" data-k="k3">Yorgo Usta'nın sandığı</a></td><td class="t">sf. 34</td></tr><tr><td class="t">4</td><td><a href="#k4" class="jump" data-k="k4">Ahmet Tümer'in çantası</a></td><td class="t">sf. 19</td></tr><tr><td class="t">5</td><td><a href="#k5" class="jump" data-k="k5">Çanakkale'den gelen yazı</a></td><td class="t">sf. 36</td></tr></table></div></div>
+<div class="stack" style="margin-top:14px"><details class="pz" id="k1"><summary><span><span class="kicker">Kilit 1</span><h3 style="margin-top:2px">Film rulosu</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 21 · aranan: bir kelime</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Jandarmanın notu kuralı veriyor: rulonun adı, Cem'in o rulodaki <i>en beğendiği</i> karelerden çıkıyor. Defterde beğeniyi gösteren bir sütun var.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Yalnızca üç işaretli kareleri alın, kare sırasıyla. Konu sütunundaki ilk kelimelerin baş harflerine bakın. Cem'in çizdiği kare hesaba girmez.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Üç işaretli kareler 3, 7, 11, 15 ve 17. Kare 15'in üstü çizili, o sayılmıyor. Kalanlar: <b>G</b>emi gelmedi, <b>E</b>ller, <b>C</b>ephe, <b>E</b>n uzun sofra.</p><p style="margin-top:14px">Şifre: <span class="code">GECE</span></p></div></details>
+</div></details><details class="pz" id="k2"><summary><span><span class="kicker">Kilit 2</span><h3 style="margin-top:2px">Hayri Bey'in çekmecesi</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 14 · aranan: bir yer adı</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Leyla Hanım şifreyi bulmacanın gri karelerine saklamış. Ama bulmacayı acele doldurduğunu, hepsinin doğru olmayabileceğini söylüyor. Boş satırları doldurun, dolu olanları da tek tek kontrol edin.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>5. soru: güneybatıdan esen fırtına rüzgârı. Bu rüzgârın adı dosyada birçok yerde geçiyor, meteoroloji bülteni dahil <span class="pg">sf. 9</span>. Leyla Hanım yanlış rüzgârı yazmış. Adanın yerli üzümü için Hayri Bey'in bağ defterindeki tekne adlarına bakın <span class="pg">sf. 10</span>.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Doğru cevaplar: TEKNE, ŞEKER, KUNTRA, FENER, <b>LODOS</b> (İMBAT değil), POYRAZ, İSKELE. Gri sütun yukarıdan aşağıya: T-E-N-E-D-O-S. Tenedos, Bozcaada'nın eski adı.</p><p style="margin-top:14px">Şifre: <span class="code">TENEDOS</span></p></div></details>
+</div></details><details class="pz" id="k3"><summary><span><span class="kicker">Kilit 3</span><h3 style="margin-top:2px">Yorgo Usta'nın sandığı</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 34 · aranan: bir ad, tersinden</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Kâğıttaki yazı Rumca değil, Rum harfleriyle yazılmış Türkçe. Levhayı kullanarak harf harf çevirin. Rumlar "d" sesini bazen ΝΤ ya da Τ ile yazar.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Not: "SANDIK ŞİFRESİ: KIZIMIN ADI, TERSİNDEN." Yorgo Usta'nın kızı kim? İfade sayfalarındaki kimlik kartlarında baba adları yazıyor <span class="pg">sf. 22</span>.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Yorgo Usta'nın kızı Despina. DESPİNA tersinden okunduğunda ANİPSED.</p><p style="margin-top:14px">Şifre: <span class="code">ANİPSED</span></p></div></details>
+</div></details><details class="pz" id="k4"><summary><span><span class="kicker">Kilit 4</span><h3 style="margin-top:2px">Ahmet Tümer'in çantası</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 19 · aranan: üç rakam</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Ahmet Bey'in ilk ifadesinde söylediği bütün saatleri alt alta yazın <span class="pg">sf. 18</span>. Hepsi onun cümlelerinde, soruları saymayın.</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Beş saat var. Bu saatlerde geçen rakamları 0'dan 9'a kadar tek tek işaretleyin. İşaretlenmeyen üç rakam kalacak; küçükten büyüğe dizin.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>19.40 · 20.45 · 20.58 · 22.05 · 08.10. Geçen rakamlar: 0, 1, 2, 4, 5, 8, 9. Hiç geçmeyenler: <b>3, 6, 7</b>.</p><p style="margin-top:14px">Şifre: <span class="code">367</span></p></div></details>
+</div></details><details class="pz" id="k5"><summary><span><span class="kicker">Kilit 5</span><h3 style="margin-top:2px">Çanakkale'den gelen yazı</h3><span class="lede" style="font-size:14px">Kilit sayfası: sf. 36 · aranan: bir dosya numarası</span></span><span class="chev"></span></summary>
+<div class="body"><details><summary><span><span class="lvl">İpucu 1</span></span><span class="chev"></span></summary><div class="body"><p>Kurutma kâğıdı ıslak mürekkebi emer, yazının izi üstünde kalır. Ama nasıl kalır? Kâğıttaki yazılar size neden tuhaf geliyor?</p></div></details><details><summary><span><span class="lvl">İpucu 2</span></span><span class="chev"></span></summary><div class="body"><p>Yazılar ayna görüntüsü gibi ters. Sayfayı bir aynaya tutun ya da telefonunuzun ön kamerasıyla bakın. Hayri Bey'in Nüfus'a yazdığı mektuptaki dosya numarasını arayın; en koyu satırlardan biri.</p></div></details>
+<details><summary><span><span class="lvl">Cevap</span></span><span class="chev"></span></summary><div class="body"><p>Aynada okunan satırlar: "Çanakkale Nüfus Müdürlüğü'ne · Bağımda çalışmakta olan … hakkında nüfus kayıt örneği gönderilmesini rica ederim. · Dosya No: 14827 · 20 Eylül 1978, H. Ataş".</p><p style="margin-top:14px">Şifre: <span class="code">14827</span></p></div></details>
+</div></details></div>
+<p class="lede" style="margin-top:20px">Şifreleri 1 numaralı QR'daki <b>Kasa</b>'ya yazın.</p>
+
+<div class="foot">Bozcaada C. Savcılığı · Hz. 1978/63 · Ataş Bağevi</div>
+</div>
+<script>document.querySelectorAll('a.jump').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const d=document.getElementById(a.dataset.k);d.open=true;d.scrollIntoView({behavior:'smooth'});}));</script>
+</body></html>
